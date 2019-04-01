@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:400,700");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Slab', sans-serif; }
+
+h2 {
+  font-size: 4rem;
+  margin: 6rem; }
+
+header {
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom right, #12c2e9, #c471ed, #f64f59); }
+  header .logo {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-image: url("../images/logo-web-crea.svg");
+    background-position: left top;
+    background-size: 300px 100px; }
+  header h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 5rem;
+    height: 40vh;
+    margin: 300px auto; }
+
+.grad2 {
+  background-image: linear-gradient(to bottom left, #8E2DE2, #4A00E0);
+  background-size: cover; }
+
+.grad3 {
+  background-image: linear-gradient(to bottom left, #0cebeb, #20e3b2, #29ffc6);
+  background-size: cover; }
+
+.main {
+  background-color: #000222;
+  width: 100%; }
+  .main .title {
+    color: #FFFFFF; }
+
+.content {
+  font-family: "Montserrat", serif; }
+
+.languages {
+  font-family: "Montserrat", sans-serif;
+  position: absolute;
+  top: 24px;
+  right: 24px; }
+  .languages ul li {
+    list-style: none;
+    display: inline-block;
+    color: #fff; }
+  .languages ul li + li:before {
+    content: "| "; }
