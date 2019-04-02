@@ -41,9 +41,17 @@ header {
   width: 100%; }
   .main .title {
     color: #FFFFFF; }
+  .main .content {
+    font-family: "Montserrat", serif;
+    color: #fff; }
 
-.content {
-  font-family: "Montserrat", serif; }
+.references {
+  padding: 2rem; }
+  .references .preview {
+    border: 2px dashed black;
+    height: 340px; }
+  .references .definition {
+    font-family: "Montserrat", sans-serif; }
 
 .languages {
   font-family: "Montserrat", sans-serif;

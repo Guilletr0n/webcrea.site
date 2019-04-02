@@ -48,10 +48,21 @@ header {
   .title {
     color: #FFFFFF;
   }
+  .content {
+    font-family: "Montserrat", serif;
+    color: #fff;
+  }
 }
 
-.content {
-  font-family: "Montserrat", serif;
+.references {
+  padding: 2rem;
+  .preview {
+    border: 2px dashed black;
+    height: 340px;
+  }
+  .definition {
+    font-family: "Montserrat", sans-serif;
+  }
 }
 
 .languages {
