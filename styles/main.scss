@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Slab:400,700');
+@import 'mixins.scss';
+
+$gutter-normal: 48px;
 
 body {
   margin:0;
   padding:0;
   font-family: 'Roboto Slab', sans-serif;
+  color: #555A55;
 }
 
 h2 {
   font-size: 4rem;
-  margin: 6rem;
+  margin: 3rem 0;
 }
 
 header {
@@ -29,7 +33,7 @@ header {
       color: #fff;
       font-size: 5rem;
       height: 40vh;
-      margin: 300px auto;
+      margin: 300px 6rem;
     }
   background-image: linear-gradient(to bottom right, #12c2e9, 	#c471ed, #f64f59);
 }
@@ -42,6 +46,10 @@ header {
   background-image: linear-gradient(to bottom left, #0cebeb, #20e3b2, #29ffc6);
   background-size: cover;
 }
+.padding-normal {
+  padding-left: $gutter-normal;
+  padding-right: $gutter-normal;
+}
 .main {
   background-color: #000222;
   width: 100%;
@@ -49,24 +57,56 @@ header {
     color: #FFFFFF;
   }
   .content {
-    font-family: "Montserrat", serif;
+    font-family: "Noto Sans", serif;
+    line-height: 1.5;
     color: #fff;
+    margin: 3rem 0;
   }
 }
 
 .references {
-  padding: 2rem;
+  padding: 4rem 0;
   .preview {
-    border: 2px dashed black;
+    overflow: hidden;
+    background-image: url('../images/browser.svg');
+    &:hover{
+      cursor: pointer;
+    }
+    img {
+      position: relative;
+      top:9px;
+      filter: grayscale(70%);
+      &:hover {
+        filter: none;
+      }
+    }
     height: 340px;
+    .svg-preview-url {
+      font-size: .8rem;
+      display: inline-block;
+      width: 50%;
+      position: relative;
+      left: 117px;
+      top: 9px;
+      font-family: "Noto Sans", sans-serif;
+      color:#666;
+      white-space: nowrap;
+      overflow:hidden;
+      &:hover{
+        color: #6666FF;
+      }
+    }
   }
   .definition {
-    font-family: "Montserrat", sans-serif;
+    font-size: .8rem;
+    margin-top: 1rem;
+    color: rgba(25,0,0,.75);
+    font-family: "Noto Sans", sans-serif;
   }
 }
 
 .languages {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Noto Sans", sans-serif;
   position: absolute;
   top:24px;
   right:24px;
@@ -80,4 +120,104 @@ header {
       content: "| ";
     }
   }
+}
+
+// form
+
+form {
+  margin-top: 3rem;
+  fieldset {
+    margin-top: 6rem;
+    input[type="text"],input[type="email"], textarea {
+      border: none;
+      border-bottom: 2px solid #29ffc6;
+      width: 100%;
+      &[required] {
+          &:focus {
+            outline: none;
+            border-color: #29ffc6;
+            + label[placeholder]:before {
+              color: #29ffc6;
+              transition-duration: 0.2s;
+              -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
+              transform: translate(0, -1.2em) scale(0.9, 0.9);
+            }
+          }
+          &:valid + label[placeholder]:before {
+            transition-duration: 0.2s;
+            -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
+            transform: translate(0, -1.5em) scale(0.9, 0.9);
+          }
+          &:invalid + label[placeholder][alt]:before {
+            content: attr(alt);
+          }
+          +label[placeholder] {
+            display: block;
+            pointer-events: none;
+            font-family: "Noto Sans", sans-serif;
+            font-size: 1.25rem;
+            margin-top: calc(-3rem);
+            margin-bottom: calc((3rem - 1rem) + 20px);
+            &:before {
+              content: attr(placeholder);
+              display: inline-block;
+              color: #BBB;
+              white-space: nowrap;
+              transition: 0.3s ease-in-out;
+              background-image: linear-gradient(to bottom, #fff, #fff);
+              background-size: 100% 5px;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+      }
+      input:not([value=""]) {
+        &:invalid {
+          border-color: red;
+        }
+        &:invalid + label[placeholder]:before {
+          transform: translate(0, -.8em) scale(0.9, 0.9);
+          color: red;
+        }
+      }
+  }
+
+
+  textarea {
+    resize: none;
+  }
+
+}
+
+footer {
+  height: 3rem;
+}
+.btn-large {
+  height: 54px;
+  line-height: 54px;
+  font-size: 15px;
+  padding: 0 28px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 700;
+  background-color: #29ffc6;
+  color: rgba(0,0,0,.75);
+  border: none;
+  border-radius: 3px;
+}
+.waves-effect {
+  text-transform: capitalize;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  vertical-align: middle;
+  z-index: 1;
+  -webkit-transition: .3s ease-out;
+  transition: .3s ease-out;
 }

@@ -4,14 +4,27 @@
   },
   "main" : {
     "title" : "About me",
-    "content" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "content" : "My passion for human interfaces led me to work as Flash(✝ 2016) developer for a decade, later I moved to open standards and webdesign. Most of my career passed in France for Agencies and start-ups. At the end of 2018 I started to offer my services as freelance."
   },
   "references" : {
-    "title" : "References"
+    "title" : "References",
+    "peaks" : {
+      "definition" : "Wordpress theme creation for recruitment Agency. Also was neccessary to create a simple interface to access a MySQL database with job offers and make possible for visitors to apply."
+    },
+    "taskl" : {
+      "definition" : "One page site created in plain html as static site. Use of gulp plugins to generate different versions for each language."
+    },
+    "exoskills" : {
+      "definition" : "Static website update using bootstrap and svg animations"
+    }
   },
   "contact" : {
-    "title" : "Don't be shy, contact me",
-    "surname" : "name",
-    "familyName" : "Family Name"
+    "title" : "Let's get in contact",
+    "subheader": "Fill your address and you will receive an email",
+    "name" : "name",
+    "email" : "email",
+    "message" : "What can I do for you",
+    "error" : "We have a problem here",
+    "submit": "SEND"
   }
 }

@@ -6,7 +6,6 @@
         <title></title>
         <meta name="description" content="">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets/css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -27,54 +26,110 @@
         <div class="row">
           <div class="col-12 col-sm-6 offset-sm-1">
             <h2 class="title">About me</h2>
-            <h3 class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h3>
+            <h3 class="content">My passion for human interfaces led me to work as Flash(✝ 2016) developer for a decade, later I moved to open standards and webdesign. Most of my career passed in France for Agencies and start-ups. At the end of 2018 I started to offer my services as freelance.</h3>
           </div>
         </div>
         <div class="row references grad3">
-          <div class="col-12">
+          <div class="col-12 offset-sm-1">
             <h2 class="title">References</h2>
           </div>
-          <div class="col-4">
-            <h3>Peaks</h3>
-            <div class="preview"></div>
+          <div class="col-4 padding-normal">
+            <div class="preview">
+              <a href="https://www.peaks.fr" target="_blank" class="svg-preview-url">www.peaks.fr</a>
+              <a href="https://www.peaks.fr" target="_blank"><img src="assets/images/references-peaks.png"/></a>
+            </div>
             <div class="definition">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Wordpress theme creation for recruitment Agency. Also was neccessary to create a simple interface to access a MySQL database with job offers and make possible for visitors to apply.
             </div>
           </div>
-          <div class="col-4">
-            <h3>Taskl</h3>
-            <div class="preview"></div>
+          <div class="col-4 padding-normal">
+            <div class="preview">
+              <a href="#" target="_blank" class="svg-preview-url">Not yet online ...</a>
+              <img src="assets/images/references-taskl-600.png"/>
+            </div>
             <div class="definition">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              One page site created in plain html as static site. Use of gulp plugins to generate different versions for each language.
             </div>
           </div>
-          <div class="col-4">
-            <h3>Exo-skills</h3>
-            <div class="preview"></div>
+          <div class="col-4 padding-normal">
+            <div class="preview">
+              <a href="https://www.exo-skills.com" target="_blank" class="svg-preview-url">www.exo-skills.com</a>
+              <a href="https://www.exo-skills.com" target="_blank"><img src="assets/images/references-exoskills-600.png"/></a>
+            </div>
             <div class="definition">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Static website update using bootstrap and svg animations
             </div>
           </div>
         </div>
       </section>
 
-      <form class="container-fluid" action="index.html" method="post">
-        <h2>Don't be shy, contact me</h2>
-        <fieldset class="row">
-          <div class="col-6">
-            <input type="text" name="surname" placeholder="name">
-            <input type="text" name="familyName" palceholder="Family Name">
-          </div>
+      <form id="contactForm" class="container-fluid">
+        <div class="row">
+          <div class="col-12 offset-sm-1">
+          <h2>Let's get in contact</h2>
+          <h3 id="contactTitle">Fill your address and you will receive an email</h3>
+          <p id="formResponse"></p>
+        </div>
+        </div>
         <fieldset>
-        <fieldset class="row">
-          <div class="col-6">
-            <input type="text" name="surname" placeholder="name">
-            <input type="text" name="familyName" palceholder="Family Name">
+          <div class="row">
+            <div class="col-4 offset-sm-1">
+              <input type="text" name="name" placeholder="" required="" onkeyup="this.setAttribute('value', this.value);" value="">
+              <label alt="name" placeholder="name"></label>
+              <br>
+              <input type="email" name="email" placeholder="" required="" onkeyup="this.setAttribute('value', this.value);" value="">
+              <label alt="email" placeholder="email"></label>
+              <br>
+            </div>
+            <div class="col-6">
+              <input id="submitButton" type="submit" class="btn-large waves-effect" value="SEND">
+            </div>
           </div>
-        <fieldset>
+        </fieldset>
       </form>
 
       <footer>
       </footer>
+      <script>
+        var form = document.getElementById("contactForm");
+        var FD = new FormData(form);
+        var isMobile = window.matchMedia("(max-width: 1186px)");
+
+        // Send form data to mailer.php using XMLHttpRequest
+
+        function sendForm(data) {
+
+        // On successful data submission
+        let XHR = new XMLHttpRequest();
+
+        XHR.addEventListener('load', function(event) {
+          document.getElementById("contactTitle").classList.toggle("fade-out");
+          document.getElementById("formResponse").classList.toggle("fade-out");
+        });
+
+        XHR.addEventListener('error', function(event) {
+          // FormError
+        });
+
+        XHR.open('POST', 'mailer.php');
+        XHR.send(data);
+        }
+
+        // Manages the form event onSubmit and send data
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var formData = new FormData(document.getElementById('contactForm'));
+          document.getElementById("submitButton").classList.toggle("hide");
+          sendForm(formData);
+        });
+
+        // helper functions
+
+        function toggleClass(elID, className) {
+          document.getElementById(elID).classList.toggle(className);
+        }
+
+      </script>
     </body>
 </html>

@@ -6,7 +6,6 @@
         <title></title>
         <meta name="description" content="">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets/css/main.css">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -31,50 +30,106 @@
           </div>
         </div>
         <div class="row references grad3">
-          <div class="col-12">
+          <div class="col-12 offset-sm-1">
             <h2 class="title">${{ index.references.title }}$</h2>
           </div>
-          <div class="col-4">
-            <h3>Peaks</h3>
-            <div class="preview"></div>
+          <div class="col-4 padding-normal">
+            <div class="preview">
+              <a href="https://www.peaks.fr" target="_blank" class="svg-preview-url">www.peaks.fr</a>
+              <a href="https://www.peaks.fr" target="_blank"><img src="assets/images/references-peaks.png"/></a>
+            </div>
             <div class="definition">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              ${{ index.references.peaks.definition }}$
             </div>
           </div>
-          <div class="col-4">
-            <h3>Taskl</h3>
-            <div class="preview"></div>
+          <div class="col-4 padding-normal">
+            <div class="preview">
+              <a href="#" target="_blank" class="svg-preview-url">Not yet online ...</a>
+              <img src="assets/images/references-taskl-600.png"/>
+            </div>
             <div class="definition">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              ${{ index.references.taskl.definition }}$
             </div>
           </div>
-          <div class="col-4">
-            <h3>Exo-skills</h3>
-            <div class="preview"></div>
+          <div class="col-4 padding-normal">
+            <div class="preview">
+              <a href="https://www.exo-skills.com" target="_blank" class="svg-preview-url">www.exo-skills.com</a>
+              <a href="https://www.exo-skills.com" target="_blank"><img src="assets/images/references-exoskills-600.png"/></a>
+            </div>
             <div class="definition">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              ${{ index.references.exoskills.definition }}$
             </div>
           </div>
         </div>
       </section>
 
-      <form class="container-fluid" action="index.html" method="post">
-        <h2>${{ index.contact.title }}$</h2>
-        <fieldset class="row">
-          <div class="col-6">
-            <input type="text" name="surname" placeholder="${{ index.contact.surname }}$">
-            <input type="text" name="familyName" palceholder="${{ index.contact.familyName }}$">
-          </div>
+      <form id="contactForm" class="container-fluid">
+        <div class="row">
+          <div class="col-12 offset-sm-1">
+          <h2>${{ index.contact.title }}$</h2>
+          <h3 id="contactTitle">${{ index.contact.subheader }}$</h3>
+          <p id="formResponse"></p>
+        </div>
+        </div>
         <fieldset>
-        <fieldset class="row">
-          <div class="col-6">
-            <input type="text" name="surname" placeholder="${{ index.contact.surname }}$">
-            <input type="text" name="familyName" palceholder="${{ index.contact.familyName }}$">
+          <div class="row">
+            <div class="col-4 offset-sm-1">
+              <input type="text" name="name" placeholder="" required="" onkeyup="this.setAttribute('value', this.value);" value="">
+              <label alt="${{ index.contact.name }}$" placeholder="${{ index.contact.name }}$"></label>
+              <br>
+              <input type="email" name="email" placeholder="" required="" onkeyup="this.setAttribute('value', this.value);" value="">
+              <label alt="${{ index.contact.email }}$" placeholder="${{ index.contact.email }}$"></label>
+              <br>
+            </div>
+            <div class="col-6">
+              <input id="submitButton" type="submit" class="btn-large waves-effect" value="${{ index.contact.submit }}$">
+            </div>
           </div>
-        <fieldset>
+        </fieldset>
       </form>
 
       <footer>
       </footer>
+      <script>
+        var form = document.getElementById("contactForm");
+        var FD = new FormData(form);
+        var isMobile = window.matchMedia("(max-width: 1186px)");
+
+        // Send form data to mailer.php using XMLHttpRequest
+
+        function sendForm(data) {
+
+        // On successful data submission
+        let XHR = new XMLHttpRequest();
+
+        XHR.addEventListener('load', function(event) {
+          document.getElementById("contactTitle").classList.toggle("fade-out");
+          document.getElementById("formResponse").classList.toggle("fade-out");
+        });
+
+        XHR.addEventListener('error', function(event) {
+          // FormError
+        });
+
+        XHR.open('POST', 'mailer.php');
+        XHR.send(data);
+        }
+
+        // Manages the form event onSubmit and send data
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+          var formData = new FormData(document.getElementById('contactForm'));
+          document.getElementById("submitButton").classList.toggle("hide");
+          sendForm(formData);
+        });
+
+        // helper functions
+
+        function toggleClass(elID, className) {
+          document.getElementById(elID).classList.toggle(className);
+        }
+
+      </script>
     </body>
 </html>
