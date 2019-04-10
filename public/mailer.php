@@ -23,23 +23,21 @@ print $htmlBody;
 
 try {
     //Server settings
-    $mail->SMTPDebug = 3;                                       // Enable verbose debug output
+    $mail->SMTPDebug = 3;
     $mail->isSMTP();
-    //$mail->isMail();
-    //$mail->Host       = 'smtp.guilletron.com';  // Specify main and backup SMTP servers
-    $mail->Host       = 'pro1.mail.ovh.net';  // Specify main and backup SMTP servers
-    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-    $mail->Username   = 'dev@guilletron.com';                     // SMTP username
-    $mail->Password   = 'LY2UtCB2mrRGsZtNQO';                               // SMTP password
-    $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 587;                                    // TCP port to connect to
+    $mail->Host       = 'pro1.mail.ovh.net';
+    $mail->SMTPAuth   = true;
+    $mail->Username   = 'dev@guilletron.com';
+    $mail->Password   = 'LY2UtCB2mrRGsZtNQO';
+    $mail->SMTPSecure = 'tls';
+    $mail->Port       = 587;
 
     //Recipients
     $mail->setFrom('dev@guilletron.com', 'WebCrea', 0);
     $mail->addAddress($destinationAddress, $userName);     // Add a recipient
     //$mail->addReplyTo('dev@guilletron.com', 'Information');
     //$mail->addCC('gonzalezdecastro.guillermo@gmail.com');
-    //$mail->addBCC('gonzalezdecastro.guillermo@gmail.com');
+    $mail->addBCC('gonzalezdecastro.guillermo@gmail.com');
     // Attachments
     //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
     //$mail->addAttachment('/tmp/image.jpg', 'new.jpg');    // Optional name
