@@ -25,18 +25,19 @@ try {
     //Server settings
     $mail->SMTPDebug = 3;                                       // Enable verbose debug output
     $mail->isSMTP();
-    //$mail->Host       = 'ssl0.ovh.net';  // Specify main and backup SMTP servers
+    //$mail->isMail();
+    //$mail->Host       = 'smtp.guilletron.com';  // Specify main and backup SMTP servers
     $mail->Host       = 'pro1.mail.ovh.net';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'dev@guilletron.com';                     // SMTP username
     $mail->Password   = 'LY2UtCB2mrRGsZtNQO';                               // SMTP password
-    $mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
-    $mail->Port       = 993;                                    // TCP port to connect to
+    $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
+    $mail->Port       = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('gonzalezdecastro.guillermo@gmail.com', 'WebCrea', 0);
+    $mail->setFrom('dev@guilletron.com', 'WebCrea', 0);
     $mail->addAddress($destinationAddress, $userName);     // Add a recipient
-    $mail->addReplyTo('dev@guilletron.com', 'Information');
+    //$mail->addReplyTo('dev@guilletron.com', 'Information');
     //$mail->addCC('gonzalezdecastro.guillermo@gmail.com');
     //$mail->addBCC('gonzalezdecastro.guillermo@gmail.com');
     // Attachments
@@ -50,6 +51,8 @@ try {
     $mail->AltBody = 'Thanks for contacting WebCrea.';
 
     if($mail->send()) {
+      print $destinationAddress.'<br>';
+      print $htmlBody;
       echo 'Message has been sent';
     } else {
       echo 'Problem width server';
