@@ -1,0 +1,42 @@
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-image width="168px" height="41px" src="https://webcrea.site/assets/images/mail-logo-gradient.png"></mj-image>
+        <mj-divider border-color="#62b0e9"></mj-divider>
+      </mj-column>
+    </mj-section>
+
+    <!-- Body -->
+
+    <mj-section padding="12px">
+      <mj-column>
+        <mj-text line-height="32px"	color="#669" font-size="20px" color="#000" font-family="roboto, sans-serif">Hello People,<br/>
+            Gracias por contactar, esto es una respuesta automatica.<br/>
+            Tan rapido como me sea posible te escribire.<br/><br/>
+            Hasta pronto,<br/>
+          </mj-text>
+      </mj-column>
+    </mj-section>
+
+  <!-- Footer -->
+
+    <mj-section text-align="left">
+          <mj-column>
+            <mj-text color="#AAAAAA" line-height="24px" font-size="14px">
+              Guillermo Gonzalez<br/>
+              10 Rue Aime Collomb<br/>
+              69003 LYON<br/>
+            </mj-text>
+          	<mj-button align="left" href="tel:+33617466991" background-color="#62b0e9">Call me</mj-button>
+          </mj-column>
+      <mj-column>
+        <mj-social mode="vertical" align="left">
+          <mj-social-element name="linkedin" href="www.linkedin.com/in/guillermo-gonzalez-de-castro-frontend-dev">Linked In</mj-social-element>
+          <mj-social-element name="github" href="https://github.com/Guilletr0n">Github</mj-social-element>
+          <mj-social-element name="web" href="https://webcrea.site">webcrea.site</mj-social-element>
+        </mj-social>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

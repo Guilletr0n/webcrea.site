@@ -1,6 +1,8 @@
 {
   "header" : {
-    "tagline" : "Webdesign & Front-end Development"
+    "tagline" : "Webdesign & Front-end Development",
+    "scroll" : "Scroll Down",
+    "language" : "en"
   },
   "main" : {
     "title" : "About me",
@@ -8,6 +10,7 @@
   },
   "references" : {
     "title" : "References",
+    "description": "Proudly I present a brief list with my last works",
     "peaks" : {
       "definition" : "Wordpress theme creation for recruitment Agency. Also was neccessary to create a simple interface to access a MySQL database with job offers and make possible for visitors to apply."
     },
@@ -25,6 +28,7 @@
     "email" : "email",
     "message" : "What can I do for you",
     "error" : "We have a problem here",
-    "submit": "SEND"
+    "submit": "SEND",
+    "success" : "The form has been sent with success :-)"
   }
 }

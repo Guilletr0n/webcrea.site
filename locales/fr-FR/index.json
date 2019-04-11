@@ -1,0 +1,34 @@
+{
+  "header" : {
+    "tagline" : "Webdesign & Développeur Front-End",
+    "scroll" : "Scroll pour continuer ...",
+    "language" : "fr"
+  },
+  "main" : {
+    "title" : "Qui c'est moi",
+    "content" : "Ma passion pour les interfaces humaines fait de moi un développeur Flash(✝ 2016) pendant un décenie, avec l'arrivée de HTML5 j'ai changé pour les standards ouvers et le webdesign. La plus part de ma carrière est passé en la France en travaillant pour des agenceset start-ups. Vers la fin de 2018 je me suis lancé comme auto-entrepreneur."
+  },
+  "references" : {
+    "title" : "Mes references",
+    "description": "Voici un échantillon de mes dérnières réalisation a partir de 2018",
+    "peaks" : {
+      "definition" : "Création d'un thème de Wordpress pour une agence de recrutement et SSII. Il a fallu aussi mettre en place un access a l'ancien base de donnèes MySQL avec les offres d'emploi et un formulaire pour postuler."
+    },
+    "taskl" : {
+      "definition" : "Site d'un seule page en html statique. Utilisation de gulp pour la génération de diferentes versions de chaque language."
+    },
+    "exoskills" : {
+      "definition" : "Intégration de site web statique avec bootstrap et des animations svg"
+    }
+  },
+  "contact" : {
+    "title" : "Faissons connaisance",
+    "subheader": "Donnez moi votre e-mail et vous receverez mes infos de contact",
+    "name" : "nom",
+    "email" : "email",
+    "message" : "",
+    "error" : "Il a passé quelque chose de mal",
+    "submit": "ENVOYER",
+    "success" : "Le formulaire est envoyé correctement :-)"
+  }
+}

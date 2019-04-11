@@ -6,7 +6,7 @@ use Sinergi\BrowserDetector\Language;
 
 $language = new Language();
 
-var_dump($language->getLanguage());
+define ('LANG', $language->getLanguage());
 
 switch ($language->getLanguage()) {
   case 'es':

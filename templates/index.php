@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="${{ index.header.language }}$">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -15,12 +15,12 @@
           <h1>${{ index.header.tagline }}$</h1>
         <div class="languages">
           <ul>
-            <li>Español</li>
-            <li>Francais</li>
-            <li>English</li>
+            <li><a href="index-es-ES.php">Español</a></li>
+            <li><a href="index-fr-FR.php">Francais</a></li>
+            <li><a href="index-en-EN.php">English</a></li>
           </ul>
         </div>
-
+        <p class="call-to-scroll">${{ index.header.scroll }}$</p>
       </header>
       <section class="container-fluid main">
         <div class="row">
@@ -29,9 +29,13 @@
             <h3 class="content">${{ index.main.content }}$</h3>
           </div>
         </div>
+
+      </section>
+      <section class="container-fluid">
         <div class="row references grad3">
           <div class="col-12 offset-sm-1">
             <h2 class="title">${{ index.references.title }}$</h2>
+            <h3 class="description">${{ index.references.description }}$</h3>
           </div>
           <div class="col-4 padding-normal">
             <div class="preview">
@@ -62,7 +66,6 @@
           </div>
         </div>
       </section>
-
       <form id="contactForm" class="container-fluid">
         <div class="row">
           <div class="col-12 offset-sm-1">
@@ -104,11 +107,14 @@
 
         XHR.addEventListener('load', function(event) {
           document.getElementById("contactTitle").classList.toggle("fade-out");
-          document.getElementById("formResponse").classList.toggle("fade-out");
+          document.getElementById("submitButton").classList.toggle("fade-out");
+          document.getElementById('formResponse').innerHTML = "${{ index.contact.success }}$";
+          console.log("success");
         });
 
         XHR.addEventListener('error', function(event) {
           // FormError
+          console.log('error');
         });
 
         XHR.open('POST', 'mailer.php');

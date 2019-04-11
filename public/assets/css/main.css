@@ -11,7 +11,7 @@ h2 {
 
 header {
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   overflow: hidden;
   background-image: linear-gradient(to bottom right, #12c2e9, #c471ed, #f64f59); }
   header .logo {
@@ -23,11 +23,18 @@ header {
     background-position: left top;
     background-size: 300px 100px; }
   header h1 {
+    position: relative;
+    top: 40%;
     text-align: center;
     color: #fff;
     font-size: 5rem;
-    height: 40vh;
-    margin: 300px 6rem; }
+    margin: auto 9rem; }
+  header p.call-to-scroll {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 48px;
+    color: #FFF; }
 
 .grad2 {
   background-image: linear-gradient(to bottom left, #8E2DE2, #4A00E0);
@@ -42,6 +49,7 @@ header {
   padding-right: 48px; }
 
 .main {
+  padding: 4rem 0;
   background-color: #000222;
   width: 100%; }
   .main .title {
@@ -50,10 +58,16 @@ header {
     font-family: "Noto Sans", serif;
     line-height: 1.5;
     color: #fff;
-    margin: 3rem 0; }
+    margin: 3rem 0 6rem 0; }
 
 .references {
   padding: 4rem 0; }
+  .references h2.title {
+    color: #FFF;
+    margin: 3rem 0 1.5rem 0; }
+  .references h3.description {
+    color: #FFF;
+    margin-bottom: 3rem; }
   .references .preview {
     overflow: hidden;
     background-image: url("../images/browser.svg");
@@ -62,6 +76,7 @@ header {
       cursor: pointer; }
     .references .preview img {
       position: relative;
+      width: 100%;
       top: 9px;
       filter: grayscale(70%); }
       .references .preview img:hover {
@@ -94,7 +109,10 @@ header {
     list-style: none;
     display: inline-block;
     color: #fff; }
+    .languages ul li a {
+      color: #fff; }
   .languages ul li + li:before {
+    color: #fff;
     content: "| "; }
 
 form {
@@ -112,11 +130,11 @@ form {
           color: #29ffc6;
           transition-duration: 0.2s;
           -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
-          transform: translate(0, -1.2em) scale(0.9, 0.9); }
+          transform: translate(0, -1em) scale(0.9, 0.9); }
       form fieldset input[type="text"][required]:valid + label[placeholder]:before, form fieldset input[type="email"][required]:valid + label[placeholder]:before, form fieldset textarea[required]:valid + label[placeholder]:before {
         transition-duration: 0.2s;
         -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
-        transform: translate(0, -1.5em) scale(0.9, 0.9); }
+        transform: translate(0, -1em) scale(0.9, 0.9); }
       form fieldset input[type="text"][required]:invalid + label[placeholder][alt]:before, form fieldset input[type="email"][required]:invalid + label[placeholder][alt]:before, form fieldset textarea[required]:invalid + label[placeholder][alt]:before {
         content: attr(alt); }
       form fieldset input[type="text"][required] + label[placeholder], form fieldset input[type="email"][required] + label[placeholder], form fieldset textarea[required] + label[placeholder] {
@@ -174,3 +192,6 @@ footer {
   z-index: 1;
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out; }
+
+html[lang='es'] header h1 {
+  margin: auto 8rem; }

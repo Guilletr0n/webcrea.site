@@ -17,7 +17,7 @@ h2 {
 
 header {
   width: 100%;
-  height: 90vh;
+  height: 95vh;
   overflow: hidden;
   .logo {
     width: 100%;
@@ -29,11 +29,19 @@ header {
     background-size: 300px 100px;
   }
     h1 {
+      position: relative;
+      top:40%;
       text-align: center;
       color: #fff;
       font-size: 5rem;
-      height: 40vh;
-      margin: 300px 6rem;
+      margin: auto 9rem;
+    }
+    p.call-to-scroll {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 48px;
+      color: #FFF;
     }
   background-image: linear-gradient(to bottom right, #12c2e9, 	#c471ed, #f64f59);
 }
@@ -51,8 +59,10 @@ header {
   padding-right: $gutter-normal;
 }
 .main {
+  padding: 4rem 0;
   background-color: #000222;
   width: 100%;
+
   .title {
     color: #FFFFFF;
   }
@@ -60,12 +70,20 @@ header {
     font-family: "Noto Sans", serif;
     line-height: 1.5;
     color: #fff;
-    margin: 3rem 0;
+    margin: 3rem 0 6rem 0;
   }
 }
 
 .references {
   padding: 4rem 0;
+  h2.title {
+    color: #FFF;
+    margin: 3rem 0 1.5rem 0;
+  }
+  h3.description {
+    color: #FFF;
+    margin-bottom: 3rem;
+  }
   .preview {
     overflow: hidden;
     background-image: url('../images/browser.svg');
@@ -74,6 +92,7 @@ header {
     }
     img {
       position: relative;
+      width: 100%;
       top:9px;
       filter: grayscale(70%);
       &:hover {
@@ -115,8 +134,12 @@ header {
       list-style: none;
       display: inline-block;
       color: #fff;
+      a {
+        color: #fff;
+      }
     }
     li + li:before {
+      color: #fff;
       content: "| ";
     }
   }
@@ -140,13 +163,13 @@ form {
               color: #29ffc6;
               transition-duration: 0.2s;
               -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
-              transform: translate(0, -1.2em) scale(0.9, 0.9);
+              transform: translate(0, -1em) scale(0.9, 0.9);
             }
           }
           &:valid + label[placeholder]:before {
             transition-duration: 0.2s;
             -webkit-transform: translate(0, -1.5em) scale(0.9, 0.9);
-            transform: translate(0, -1.5em) scale(0.9, 0.9);
+            transform: translate(0, -1em) scale(0.9, 0.9);
           }
           &:invalid + label[placeholder][alt]:before {
             content: attr(alt);
@@ -220,4 +243,12 @@ footer {
   z-index: 1;
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out;
+}
+
+html[lang='es'] {
+  header {
+    h1 {
+      margin: auto 8rem;
+    }
+  }
 }
