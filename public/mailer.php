@@ -14,7 +14,7 @@ if(isset($_POST["name"])) {
 if(isset($_POST["email"])) {
   $destinationAddress = $_POST["email"];
 } else {
-  $destinationAddress = "dev@guilletron.com";
+  $destinationAddress = "- an unknown address -";
 }
 
 ob_start();

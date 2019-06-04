@@ -210,7 +210,7 @@ $subject = "Respuesta autom&aacute;tica";
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tr>
                     <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                      <div style="font-family:roboto, sans-serif;font-size:20px;line-height:32px;text-align:left;color:#666699;"> Hola <?=$userName?>,<br/> Has recibido este email porque rellenaste el formulario de https://webcrea.site.<br/> Puedes contestar a la misma direcci&oacute;n y contarme qu&eacute; puedo hacer por t&iacute; o dame tus datos y te escribir&eacute; en cuanto me sea posible.<br/><br/> Gracias y hasta pronto !&quot;</div>
+                      <div style="font-family:roboto, sans-serif;font-size:20px;line-height:32px;text-align:left;color:#666699;"> Hola <?=$userName?>,<br/> Has recibido este email porque rellenaste el formulario de https://webcrea.site con la dirección <?=$destinationAddress?>.<br/> Puedes contestar a la misma direcci&oacute;n y contarme qu&eacute; puedo hacer por t&iacute;</div>
                     </td>
                   </tr>
                 </table>
