@@ -1,7 +1,7 @@
 <?php
 
 require '../vendor/autoload.php';
-require '../includes/view.php';
+require '../includes/View.php';
 
 use Sinergi\BrowserDetector\Language;
 
