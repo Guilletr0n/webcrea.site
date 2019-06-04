@@ -4524,20 +4524,16 @@ header {
     font-size: 5rem;
     margin: auto 9rem;
     font-weight: 300; }
+    @media only screen and (orientation: portrait) and (min-resolution: 192dpi) {
+      header h1 {
+        font-size: 2rem;
+        margin: auto 1rem; } }
   header p.call-to-scroll {
     position: absolute;
     width: 100%;
     text-align: center;
     bottom: 48px;
     color: #FFF; }
-
-.grad2 {
-  background-image: linear-gradient(to bottom left, #8E2DE2, #4A00E0);
-  background-size: cover; }
-
-.grad3 {
-  background-image: linear-gradient(to bottom left, #0cebeb, #20e3b2, #29ffc6);
-  background-size: cover; }
 
 .padding-normal {
   padding-left: 48px;
@@ -4549,24 +4545,30 @@ header {
   width: 100%; }
   .main .title {
     color: #FFFFFF;
-    font-weight: 300; }
+    font-weight: 300;
+    margin: 3rem 1rem; }
+    @media (max-width: 599px) {
+      .main .title {
+        font-size: 3rem; } }
   .main .content {
     font-family: "IBM Plex Sans", serif;
     font-size: 1rem;
     font-weight: 300;
     line-height: 2;
     color: #fff;
-    margin: 3rem 0 6rem 0;
+    margin: 3rem 1rem 6rem 1rem;
     opacity: 0.75; }
 
 .references {
   margin: 0;
-  padding-top: 3rem;
-  padding-bottom: 3rem; }
+  padding: 3rem 1rem; }
   .references h2.title {
     color: #FFF;
     margin: 3rem 0 1.5rem 0;
     font-weight: 300; }
+    @media (max-width: 599px) {
+      .references h2.title {
+        font-size: 3rem; } }
   .references .description {
     color: #FFF;
     margin-bottom: 3rem;
@@ -4702,14 +4704,21 @@ footer {
   -webkit-transition: .3s ease-out;
   transition: .3s ease-out; }
 
-html[lang='es'] header h1 {
-  margin: auto 8rem;
-  letter-spacing: -3px; }
+@media (max-resolution: 92dpi) {
+  html[lang='es'] header h1 {
+    margin: auto 8rem;
+    letter-spacing: -3px; }
+  html[lang='en'] header h1 {
+    margin: auto 8rem;
+    letter-spacing: -3px; }
+  html[lang='fr'] header h1 {
+    margin: auto 8rem;
+    letter-spacing: -3px; } }
 
-html[lang='en'] header h1 {
-  margin: auto 8rem;
-  letter-spacing: -3px; }
+.grad2 {
+  background-image: linear-gradient(to bottom left, #8E2DE2, #4A00E0);
+  background-size: cover; }
 
-html[lang='fr'] header h1 {
-  margin: auto 8rem;
-  letter-spacing: -3px; }
+.grad3 {
+  background-image: linear-gradient(to bottom left, #0cebeb, #20e3b2, #29ffc6);
+  background-size: cover; }

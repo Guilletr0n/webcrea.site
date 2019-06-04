@@ -4,7 +4,7 @@
   $view->setlocale(LANG); ?>
 <section class="references container-fluid grad3">
   <div class="row">
-    <div class="col l-12 offset-1">
+    <div class="col l6 padding-normal">
       <h2 class="title">
         <?=$view->translate('index.references.title')?>
       </h2>

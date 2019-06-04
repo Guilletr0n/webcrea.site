@@ -5,7 +5,7 @@
 ?>
 <section class="container-fluid main">
   <div class="row">
-    <div class="col l6 offset-1">
+    <div class="col l6">
       <h2 class="title">
         <?=$view->translate('index.main.title')?>
       </h2>
