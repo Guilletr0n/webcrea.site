@@ -1,12 +1,12 @@
 {
   "header" : {
-    "tagline" : "Webdesign & Développeur Front-End",
+    "tagline" : "Webdesigner & Développeur Front-End",
     "scroll" : "Scroll pour continuer ...",
     "language" : "fr"
   },
   "main" : {
     "title" : "Qui c'est moi",
-    "content" : "Ma passion pour les interfaces humaines fait de moi un développeur Flash(✝ 2016) pendant un décenie, avec l'arrivée de HTML5 j'ai changé pour les standards ouvers et le webdesign. La plus part de ma carrière est passé en la France en travaillant pour des agenceset start-ups. Vers la fin de 2018 je me suis lancé comme auto-entrepreneur."
+    "content" : "Ma passion pour les interfaces humaines fait de moi un développeur Flash (✝ 2016) pendant un décenie, avec l'arrivée de HTML5 j'ai changé pour les standards ouvers et le webdesign. La plus part de ma carrière est passé en la France en travaillant pour des agences et des start-ups. Vers la fin de 2018 je me suis lancé comme auto-entrepreneur."
   },
   "references" : {
     "title" : "Mes references",
@@ -22,13 +22,13 @@
     }
   },
   "contact" : {
-    "title" : "Faissons connaisance",
+    "title" : "Faisons connaisance",
     "subheader": "Donnez moi votre e-mail et vous receverez mes infos de contact",
-    "name" : "nom",
-    "email" : "email",
+    "name" : "Nom",
+    "email" : "Email",
     "message" : "",
-    "error" : "Il a passé quelque chose de mal",
-    "submit": "ENVOYER",
+    "error" : "Il a passé quelque chose de mal :-(",
+    "submit": "Envoyer",
     "success" : "Le formulaire est envoyé correctement :-)"
   }
 }

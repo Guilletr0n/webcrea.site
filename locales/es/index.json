@@ -1,0 +1,34 @@
+{
+  "header" : {
+    "tagline" : "Diseño web y desarrollo Front-End",
+    "scroll" : "Scoll para continuar ...",
+    "language" : "es"
+  },
+  "main" : {
+    "title" : "About me",
+    "content" : "Mi pasión por el diseño y las interfaces gráficas me hizo trabajar durante una década como webdesigner y desarrollador Flash (✝ 2016). Más tarde lo cambié para abrazar el código abierto y la programación web. La mayoría de mi carrera ha transcurrido en Francia trabajando para agencias y start-ups. A finales de 2018 comencé a ofrecer mi servicios como freelance."
+  },
+  "references" : {
+    "title" : "Mis referencias",
+    "description": "Una muestra de mis útlimos trabajos como desarrollador web",
+    "peaks" : {
+      "definition" : "Creación de un tema para Wordpress para una consultoría informática. También hubo que enlazar un formulario con la base de datos preexistente para recibir las candidaturas y crear un servicio para mostrar las ofertas de empleo."
+    },
+    "taskl" : {
+      "definition" : "Sitio web estático tipo one-page-site, usando node-js para generar las localizaciones y compilar la versión de producción."
+    },
+    "exoskills" : {
+      "definition" : "Sitio web estático"
+    }
+  },
+  "contact" : {
+    "title" : "Vamos a quedar",
+    "subheader": "Introduce tu e-mail en el formulario y te llegará un email con mis datos de contacto",
+    "name" : "Nombre",
+    "email" : "Email",
+    "message" : "Qué puedo hacer por ti",
+    "error" : "Ha habido algún problema",
+    "submit": "ENVIAR",
+    "success" : "Se ha enviado correctamente :-)"
+  }
+}

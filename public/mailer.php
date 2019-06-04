@@ -50,7 +50,7 @@ try {
 
   // Content
   $mail->isHTML(true);
-  $mail->Subject = '';
+  $mail->Subject = $subject;
   $mail->Body    = $htmlBody;
   $mail->AltBody = 'Thanks for contacting WebCrea.';
 

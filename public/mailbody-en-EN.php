@@ -1,3 +1,6 @@
+<?php
+$subject = "Response from website";
+?>
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
@@ -207,7 +210,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tr>
                     <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                      <div style="font-family:roboto, sans-serif;font-size:20px;line-height:32px;text-align:left;color:#666699;"> Hello <?=$userName?>,<br/> This is an automatic response just to share contact info.<br/>You can answer this email and tell me what can I do for you, or I will write you ass soon as possible.<br/><br/> Thanks !</div>
+                      <div style="font-family:roboto, sans-serif;font-size:20px;line-height:32px;text-align:left;color:#666699;"> Hello <?=$userName?>,<br/> You are receiving this email because you entered your email address in https://webcrea.site <br/>You can answer this email and tell me what can I do for you, or I will write you ass soon as possible.<br/><br/> Thanks !</div>
                     </td>
                   </tr>
                 </table>

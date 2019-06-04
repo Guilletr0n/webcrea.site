@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,600&display=swap");
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   color: #555A55; }
 
 h2 {
@@ -55,10 +55,13 @@ header {
   .main .title {
     color: #FFFFFF; }
   .main .content {
-    font-family: "Noto Sans", serif;
-    line-height: 1.5;
+    font-family: "IBM Plex Sans", serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2;
     color: #fff;
-    margin: 3rem 0 6rem 0; }
+    margin: 3rem 0 6rem 0;
+    opacity: 0.75; }
 
 .references {
   padding: 4rem 0; }
@@ -67,11 +70,11 @@ header {
     margin: 3rem 0 1.5rem 0; }
   .references h3.description {
     color: #FFF;
-    margin-bottom: 3rem; }
+    margin-bottom: 3rem;
+    font-size: 1.5rem; }
   .references .preview {
     overflow: hidden;
-    background-image: url("../images/browser.svg");
-    height: 340px; }
+    background-image: url("../images/browser.svg"); }
     .references .preview:hover {
       cursor: pointer; }
     .references .preview img {
@@ -88,7 +91,7 @@ header {
       position: relative;
       left: 117px;
       top: 9px;
-      font-family: "Noto Sans", sans-serif;
+      font-family: "IBM Plex Sans", sans-serif;
       color: #666;
       white-space: nowrap;
       overflow: hidden; }
@@ -98,10 +101,10 @@ header {
     font-size: .8rem;
     margin-top: 1rem;
     color: rgba(25, 0, 0, 0.75);
-    font-family: "Noto Sans", sans-serif; }
+    font-family: "IBM Plex Sans", sans-serif; }
 
 .languages {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   position: absolute;
   top: 24px;
   right: 24px; }
@@ -140,7 +143,7 @@ form {
       form fieldset input[type="text"][required] + label[placeholder], form fieldset input[type="email"][required] + label[placeholder], form fieldset textarea[required] + label[placeholder] {
         display: block;
         pointer-events: none;
-        font-family: "Noto Sans", sans-serif;
+        font-family: "IBM Plex Sans", sans-serif;
         font-size: 1.25rem;
         margin-top: calc(-3rem);
         margin-bottom: calc((3rem - 1rem) + 20px); }
@@ -159,6 +162,8 @@ form {
     form fieldset input:not([value=""]):invalid + label[placeholder]:before {
       transform: translate(0, -0.8em) scale(0.9, 0.9);
       color: red; }
+    form fieldset input[type="submit"] {
+      text-transform: uppercase; }
   form textarea {
     resize: none; }
 
@@ -194,4 +199,13 @@ footer {
   transition: .3s ease-out; }
 
 html[lang='es'] header h1 {
-  margin: auto 8rem; }
+  margin: auto 8rem;
+  letter-spacing: -3px; }
+
+html[lang='en'] header h1 {
+  margin: auto 8rem;
+  letter-spacing: -3px; }
+
+html[lang='fr'] header h1 {
+  margin: auto 8rem;
+  letter-spacing: -3px; }

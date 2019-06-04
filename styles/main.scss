@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans|Roboto+Slab:400,700');
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,600&display=swap');
 @import 'mixins.scss';
 
 $gutter-normal: 48px;
@@ -6,7 +6,7 @@ $gutter-normal: 48px;
 body {
   margin:0;
   padding:0;
-  font-family: 'Roboto Slab', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   color: #555A55;
 }
 
@@ -67,10 +67,13 @@ header {
     color: #FFFFFF;
   }
   .content {
-    font-family: "Noto Sans", serif;
-    line-height: 1.5;
+    font-family: "IBM Plex Sans", serif;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 2;
     color: #fff;
     margin: 3rem 0 6rem 0;
+    opacity: 0.75;
   }
 }
 
@@ -83,6 +86,7 @@ header {
   h3.description {
     color: #FFF;
     margin-bottom: 3rem;
+    font-size: 1.5rem;
   }
   .preview {
     overflow: hidden;
@@ -99,7 +103,6 @@ header {
         filter: none;
       }
     }
-    height: 340px;
     .svg-preview-url {
       font-size: .8rem;
       display: inline-block;
@@ -107,7 +110,7 @@ header {
       position: relative;
       left: 117px;
       top: 9px;
-      font-family: "Noto Sans", sans-serif;
+      font-family: "IBM Plex Sans", sans-serif;
       color:#666;
       white-space: nowrap;
       overflow:hidden;
@@ -120,12 +123,12 @@ header {
     font-size: .8rem;
     margin-top: 1rem;
     color: rgba(25,0,0,.75);
-    font-family: "Noto Sans", sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
   }
 }
 
 .languages {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   position: absolute;
   top:24px;
   right:24px;
@@ -177,7 +180,7 @@ form {
           +label[placeholder] {
             display: block;
             pointer-events: none;
-            font-family: "Noto Sans", sans-serif;
+            font-family: "IBM Plex Sans", sans-serif;
             font-size: 1.25rem;
             margin-top: calc(-3rem);
             margin-bottom: calc((3rem - 1rem) + 20px);
@@ -204,6 +207,9 @@ form {
           color: red;
         }
       }
+    input[type="submit"]{
+      text-transform: uppercase;
+    }  
   }
 
 
@@ -249,6 +255,23 @@ html[lang='es'] {
   header {
     h1 {
       margin: auto 8rem;
+      letter-spacing: -3px;
+    }
+  }
+}
+html[lang='en'] {
+  header {
+    h1 {
+      margin: auto 8rem;
+      letter-spacing: -3px;
+    }
+  }
+}
+html[lang='fr'] {
+  header {
+    h1 {
+      margin: auto 8rem;
+      letter-spacing: -3px;
     }
   }
 }

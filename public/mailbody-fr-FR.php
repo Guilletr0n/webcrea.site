@@ -1,3 +1,6 @@
+<?php
+$subject = "R&eacute;ponse automatique";
+?>
 <!doctype html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
@@ -207,7 +210,7 @@
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tr>
                     <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                      <div style="font-family:roboto, sans-serif;font-size:20px;line-height:32px;text-align:left;color:#666699;"> Bonjour <?=$userName?>,<br/> Ceci est une r&#xE9;ponse automatique pour partager mes donn&#xE9;es de contact.<br/>Vous pouvez m&#x27;avancer le sujet de votre demande, ou sinon je vous contaterais avec le moins delai possible.<br/><br/>Merci et &#xE0; bient&#xF4;t !</div>
+                      <div style="font-family:roboto, sans-serif;font-size:20px;line-height:32px;text-align:left;color:#666699;"> Bonjour <?=$userName?>,<br/> Ceci est une r&eacute;ponse automatique de https://webcrea.site pour partager mes donn&#xE9;es de contact. Vous pouvez m&#x27;avancer le sujet de votre demande, ou sinon je vous contaterais avec le moins de delai possible.<br/><br/>Merci et &#xE0; bient&#xF4;t !</div>
                     </td>
                   </tr>
                 </table>

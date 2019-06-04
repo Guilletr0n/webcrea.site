@@ -1,38 +1,12 @@
 const gulp = require('gulp');
-const i18n = require('gulp-html-i18n');
 const sass = require('gulp-sass');
 
 sass.compiler = require('node-sass');
 
 
 var paths = {
-  styles: './styles/*.scss',
-  locales: './templates/*.php'
+  styles: './styles/*.scss'
 };
-
-gulp.task('localize', function() {
-  var dest  = './public';
-  var source = './templates/*.php';
-
-  return gulp.src(source)
-    .pipe(i18n({
-      langDir: './locales',
-      trace: false
-    }))
-    .pipe(gulp.dest(dest));
-});
-
-gulp.task('default', function() {
-  var dest  = './public';
-  var source = './templates/*.php';
-
-  return gulp.src(source)
-    .pipe(i18n({
-      langDir: './locales',
-      trace: false
-    }))
-    .pipe(gulp.dest(dest));
-});
 
 gulp.task('scss', function() {
   var source = "./styles/*.scss";
@@ -56,6 +30,5 @@ gulp.task('sass:watch', function () {
 
 gulp.task('watch', (done) => {
   gulp.watch(paths.styles, {ignoreInitial:false}, gulp.series('sass'));
-  gulp.watch(paths.locales, {ignoreInitial:false}, gulp.series('localize'));
   done();
 });
