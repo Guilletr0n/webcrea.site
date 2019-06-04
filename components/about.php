@@ -1,5 +1,5 @@
 <?php
-  require_once ('../includes/view.php');
+  require_once ('../includes/View.php');
   $view = new View();
   $view->setlocale(LANG);
 ?>
