@@ -210,7 +210,7 @@ $subject = "R&eacute;ponse automatique";
                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;" width="100%">
                   <tr>
                     <td align="left" style="font-size:0px;padding:10px 25px;word-break:break-word;">
-                      <div style="font-family:roboto, sans-serif;font-size:20px;line-height:32px;text-align:left;color:#666699;"> Bonjour <?=$userName?>,<br/> Vous avez reçu cet email parce que vous avez rempli le formulaire de contact de https://webcrea.site avec l'addresse <?=$destinationAddress?>Ceci est une r&eacute;ponse automatique de pour partager mes donn&#xE9;es de contact. Vous pouvez m&#x27;avancer le sujet de votre demande, ou sinon je vous contaterais avec le moins de delai possible.<br/><br/>Merci et &#xE0; bient&#xF4;t !</div>
+                      <div style="font-family:roboto, sans-serif;font-size:20px;line-height:32px;text-align:left;color:#666699;"> Bonjour <?=$userName?>,<br/> Vous avez reçu cet email parce que vous avez rempli le formulaire de contact de https://webcrea.site avec l'addresse <?=$destinationAddress?> Ceci est une r&eacute;ponse automatique de pour partager mes donn&#xE9;es de contact. Vous pouvez m&#x27;avancer le sujet de votre demande, ou sinon je vous contaterais avec le moins de delai possible.<br/><br/>Merci et &#xE0; bient&#xF4;t !</div>
                     </td>
                   </tr>
                 </table>
