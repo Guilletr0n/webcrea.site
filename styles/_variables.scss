@@ -1,0 +1,54 @@
+$images_base_url: '../images/';
+$res1: '96dpi';
+$res2: '192dpi';
+$res3: '300dpi';
+$pixel-ratio-1: 1;
+$pixel-ratio-2: 2;
+$pixel-ratio-3: 3;
+$content-width: 1440px;
+
+// font names
+
+$font-regular: 'Amplitude', sans-serif;
+$font-light: 'campton-light', sans-serif;
+$font-semibold: 'campton-semibold', sans-serif;
+$font-medium: 'campton-medium', sans-serif;
+$font-book: 'campton-book', sans-serif;
+
+//font-sizes
+
+$xlarge: 4rem; // 64px
+$large: 2.5rem; // 40px
+$medium: 1.875rem; // 30px
+$base: 1.25rem; // 20px
+$normal: 1rem; // 16px
+$small: 0.875rem; // 14px
+$xsmall: 0.75rem; // 12px
+$testimonial: 2rem; // 32px
+
+// line-height
+
+$line-height-subheadline: 1.67;
+$mobile-line-height-subheadline: 1.33;
+
+// media queries
+
+$mobile: 430px;
+$desktop: 1200px;
+
+// Grid
+$container-width: 1440px !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: 2rem !default;
+$grid-breakpoints: (
+  xs: 0,
+  s: 576px,
+  m: 768px,
+  l: 992px,
+  xl: 1200px,
+  xxl: 1370px,
+) !default;
+
+$container-medium-width: 1160px;
+
+$insidePaddingTop: 48px + 172px;

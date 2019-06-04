@@ -1,0 +1,115 @@
+@import 'variables';
+
+.container {
+  width: 100%;
+  max-width: $container-width;
+  margin: auto;
+
+  &--medium {
+    max-width: $container-medium-width;
+  }
+
+  &.fluid {
+    max-width: none;
+  }
+}
+
+.container--full-width {
+  padding-right: 0;
+  padding-left: 0;
+
+  .col,
+  .row {
+    width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: ($grid-gutter-width / -2);
+  margin-left: ($grid-gutter-width / -2);
+  margin-bottom: 1rem;
+
+  &.justified {
+    justify-content: space-between;
+  }
+
+  //& > * {
+  //  flex: 0 0 auto;
+  //  box-sizing: border-box;
+  //  align-self: flex-start;
+  //}
+}
+
+.col {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  min-height: 1px;
+  margin: 0;
+  padding: 0 ($grid-gutter-width / 2);
+
+  &.row {
+    display: inline-flex;
+  }
+}
+
+// Remove the negative margin from default .row, then the horizontal padding
+// from all immediate children columns (to prevent runaway style inheritance).
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.fit-height {
+  display: flex;
+
+  & > * {
+    flex: 1;
+  }
+}
+
+@for $i from 0 through $grid-columns {
+  .order-#{$i} {
+    order: $i;
+  }
+  .offset-#{$i} {
+    $num: $i / $grid-columns;
+    margin-left: if($num == 0, 0, percentage($num));
+  }
+}
+
+// Common properties for all breakpoints
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @media screen and (min-width: map-get($grid-breakpoints, $breakpoint)) {
+    @for $i from 0 through $grid-columns {
+      .col.#{$breakpoint}#{$i} {
+        @if ($i == 0) {
+          display: none;
+        } @else {
+          flex: #{$i} 1 percentage($i / $grid-columns);
+          display: inline-block;
+          max-width: percentage($i / $grid-columns);
+        }
+
+        @for $ii from 0 through $grid-columns {
+          &.offset-#{$breakpoint}#{$ii} {
+            $num: $ii / $grid-columns;
+            margin-left: if($num == 0, 0, percentage($num));
+          }
+
+          &.order-#{$breakpoint}#{$ii} {
+            order: $ii;
+          }
+        }
+      }
+    }
+  }
+}

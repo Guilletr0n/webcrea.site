@@ -22,7 +22,7 @@
     }
   },
   "contact" : {
-    "title" : "Vamos a quedar",
+    "title" : "Dame tu nombre y tu email y recibirás mis datos de contacto",
     "subheader": "Introduce tu e-mail en el formulario y te llegará un email con mis datos de contacto",
     "name" : "Nombre",
     "email" : "Email",
