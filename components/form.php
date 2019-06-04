@@ -19,7 +19,7 @@
         <label alt="<?=$view->translate('index.contact.email')?>" placeholder="<?=$view->translate('index.contact.email')?>"></label>
         <br>
       </div>
-      <div class="col l6">
+      <div class="col l6 offset-1">
         <input id="submitButton" type="submit" class="btn-large waves-effect" value="<?=$view->translate('index.contact.submit')?>">
       </div>
     </div>
